@@ -5,7 +5,6 @@ clear
 echo "Enter a number between 10 and 100: "
 read number
 
-#I'm worried this may not run on graders machine the same way
 if [[ $number -gt 100  ||  $number -lt 10 ]];then
 	echo 
 	echo "You didn't enter a number in the correct range! Try again!"
