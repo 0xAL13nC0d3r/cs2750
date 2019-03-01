@@ -27,7 +27,7 @@ Attention! In the beginning of each program (Bash script file), after “shebang
 ----
 
 ### B.	[20 points] Write a Bash shell script factor.sh  that will do the following: 1) it prompts a  user to enter an integer n from 10 to 100; 2) Find the smallest (prime) factor for that number, so if the number is 21, it would output the message “The smallest factor is 3”. If the number was 77, it would output “The smallest factor is 7”. 3) If the number has no factors other than itself, it should output “This number is prime”.  
----
+----
 ### C.	[15 points] Write a Bash shell script testaverager.sh that will determine if a person has passed a class. It should take in as a command-line parameter a name (first and last name) as well as a series of numbers. This list could be of any length. Your script should start by calculating the average of the scores. If the result is below 70, it should output “Sorry [name] but you will have to retake the class!”. If the result is 70 or greater, congratulation the student with some message about succeeding at the class. 
 
 Mary Jones 82.5 78.3 86.0   
