@@ -1,13 +1,18 @@
 #!/bin/bash
-
-path = $(pwd)
+#Matt Cassell
+#Write a Bash shell script to output various commands introduced in class.
 
 clear
 echo "Name of script: $0" 
 
 if [  -z $1 ];then
-	echo
 	echo "Usage <name of file> <name of directory>"
+	exit
+elif [ ! -f $1 ];then
+	echo "Invalid file"
+	exit
+elif [ ! -d $2 ];then
+	echo "Invalid directory"
 	exit
 fi
 
@@ -21,7 +26,7 @@ whoami
 
 echo
 echo -n "Name of current working directory: " 
-pwd
+echo "$PWD" | sed 's!.*/!!'
 
 echo
 echo -n "Name of UNIX machine: " 
@@ -37,7 +42,7 @@ file $0
 
 echo 
 echo -n "Number of text line in the file: "
-wc -l info.sh
+wc -l info.sh | awk '{print $1}'
 
 echo 
 echo -n "Listing of the required directory: "
@@ -51,6 +56,7 @@ echo
 echo "Calender for October 2019: "
 cal -m 10
 
+path=$(pwd)
 echo
 echo -n "Disk usage: "
 du -h $path
@@ -58,7 +64,6 @@ du -h $path
 echo 
 echo -n "Current number of users in the system: "
 who | wc -l
-
 
 echo
 echo -n "Current time: "

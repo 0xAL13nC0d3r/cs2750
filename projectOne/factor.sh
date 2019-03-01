@@ -1,5 +1,6 @@
 #!/bin/bash
-factor=1
+#Matt Cassell
+#Write a Bash shell script to find the smallest prime factor for two integers give by the user.
 
 clear
 echo "Enter a number between 10 and 100: "
@@ -11,6 +12,7 @@ if [[ $number -gt 100  ||  $number -lt 10 ]];then
 	exit
 fi
 
+factor=1
 for (( i=$number; i>1; i-- ))
 do
 	if [ $(( $number % $i)) -eq 0 ];then
@@ -19,11 +21,9 @@ do
 done
 
 if [ $factor -eq 1 ];then
-	echo
 	echo "This number is prime"
 	exit
 else
-	echo
 	echo "The smallest factor is ${factor}" 
 	exit
 fi
