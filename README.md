@@ -1,4 +1,4 @@
-# System programming and Tools 
+# System Programming and Tools 
                                              Project #1 [65 points]
 ---------------------------------------------------------------------------------------------------   
 Attention! In the beginning of each program (Bash script file), after “shebang” line, there should be comments with the author’s name and the purpose of a script. Up to 3 points will be subtracted from your score for each part of the project if you don’t include this information.
