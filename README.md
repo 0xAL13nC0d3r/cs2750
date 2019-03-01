@@ -18,7 +18,7 @@ Attention! In the beginning of each program (Bash script file), after “shebang
 - Disk usage;
 - Current number of users in the system;
 - Current time.
-Important: 
+##### Important: 
 1) make sure that in the beginning of your script you include information about a shell that will execute your script and the ‘usage’ line; 
 2) check the number of parameters and their types in the beginning of the script; if requirements are not met exit with a non-zero status; 
 3) each portion of the output must be preceded with some clarifying information; 
