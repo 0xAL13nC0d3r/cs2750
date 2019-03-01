@@ -1,7 +1,0 @@
-#!/bin/bash
-
-fname = $1
-lname = $2
-score1 = $3
-
-
