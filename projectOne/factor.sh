@@ -1,6 +1,6 @@
 #!/bin/bash
 #Matt Cassell
-#Write a Bash shell script to find the smallest prime factor for two integers give by the user.
+#Write a Bash shell script to find the smallest prime factor for two integers given by the user.
 
 clear
 echo "Enter a number between 10 and 100: "
