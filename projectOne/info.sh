@@ -12,7 +12,7 @@ elif [ ! -f $1 ];then
 	echo "Invalid file"
 	exit
 elif [ ! -d $2 ];then
-	echo "Invalid directory"
+	echo "Invalid directory, type in entire path..."
 	exit
 fi
 
