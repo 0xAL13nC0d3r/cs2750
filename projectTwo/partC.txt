@@ -1,0 +1,21 @@
+1. Remove any uppercase or lowercase version of my intials (MWH) from a document and replace them with MRH.
+
+sed -e 's/MRH/MWH/gI' file.txt
+
+2. Write a regular expression that would match any file ending in .jpg
+
+.*\.\jpg\
+
+
+2.a. Using the above regular expression, use sed to replace that extension with the extension .jpeg
+
+sed 's/\.jpg/\.jpeg/' file.txt
+
+3. Give a sed command that would output every line in a file that did not start with the letter 'a' and end with .html
+
+sed '/^a.*html$/d' file.txt
+
+4. Write a line in sed to find all phone numbers that look like 1234567890 with (123)456-7890
+
+
+
