@@ -7,9 +7,7 @@ if [ -z $1 ] || [ ! -d $1 ];then
 	exit
 fi
 
-echo $1
 FILES=$1/*
-echo $FILES
 
 for f in $FILES
 do
