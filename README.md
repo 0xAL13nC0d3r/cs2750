@@ -33,3 +33,17 @@ Attention! In the beginning of each program (Bash script file), after “shebang
 Mary Jones 82.5 78.3 86.0   
 Congratulations Mary Jones, you passed with an average of 82!
  
+
+                                             Project #2 [65 points]
+---------------------------------------------------------------------------------------------------  
+### A. [20 points] Write a script named listEmptyDir.sh that will do the following: (a) take a name of a directory as a parameter; (b) loop through all files in this directory and display their names; (c) if a file is a directory and has no files in it (empty directory), add the name of this empty directory to the file EmptyDir.txt in your current directory. If the number of parameters is not 1 or a parameter is not a directory, display the “usage” message and exit with non-zero status. Your file for submission should demonstrate that you have investigated all possible situations.
+
+### B. [25 points] Transform a script contact_one.sh (sec. 5.2) so that instead of using a file with names it will use a HERE document (it may include the same information as the file myContactlist). Another change is that instead of using a positional parameter you read a pattern from a user (don’t forget about a prompt). Include a command grep into a while or until loop providing different input strings. If a name is not in HERE document, display a message saying that.
+A HERE document is a way to add input to a script easily. It is described in section 5.17 of our textbook, page 144 in my copy. I have uploaded a copy of contact_one.sh
+
+### C. [20 points] For this part, include a text document with the regular expressions for some sed calls that would do the following tasks:
+1) Remove any uppercase or lowercase version of my initials (MWH) from a document and replace them with MRH.
+2) Write a regular expression that would match any file in ending in .jpg
+2a) Using the above regular expression, use sed to replace that extension with the extension .jpeg
+3) Give a sed command that would output every line in a file that did not start with the letter ‘a’ and do not end with .html
+4) Write a line in sed to find all phone numbers that look like 1234567890 with (123)456-7890
