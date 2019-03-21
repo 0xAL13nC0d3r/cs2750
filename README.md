@@ -1,4 +1,5 @@
 # System Programming and Tools 
+---------------------------------------------------------------------------------------------------  
                                              Project #1 [65 points]
 ---------------------------------------------------------------------------------------------------   
 Attention! In the beginning of each program (Bash script file), after “shebang” line, there should be comments with the author’s name and the purpose of a script. Up to 3 points will be subtracted from your score for each part of the project if you don’t include this information.
@@ -34,6 +35,7 @@ Mary Jones 82.5 78.3 86.0
 Congratulations Mary Jones, you passed with an average of 82!
  
 
+---------------------------------------------------------------------------------------------------  
                                              Project #2 [65 points]
 ---------------------------------------------------------------------------------------------------  
 ### A. [20 points] Write a script named listEmptyDir.sh that will do the following: (a) take a name of a directory as a parameter; (b) loop through all files in this directory and display their names; (c) if a file is a directory and has no files in it (empty directory), add the name of this empty directory to the file EmptyDir.txt in your current directory. If the number of parameters is not 1 or a parameter is not a directory, display the “usage” message and exit with non-zero status. Your file for submission should demonstrate that you have investigated all possible situations.
