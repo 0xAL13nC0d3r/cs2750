@@ -1,0 +1,13 @@
+#!/bin/bash
+cat << names
+Steve Carell
+Pam Beesly 
+Dwight Schrute
+Jim Halpert 
+Andy Bernard
+Angela Martin
+Kelly Kapoor
+Kevin Malone
+Ryan Howard
+Stanley Hudson
+names
