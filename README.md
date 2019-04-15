@@ -64,8 +64,8 @@ A HERE document is a way to add input to a script easily. It is described in sec
 The output should be:
 	three two one
 ### B.	[20 points] Adding to your program in part A, go through the command line arguments and find the largest and smallest arguments (by lexographic order). Note that you should not need to sort your arguments, but instead compare them and save the smallest and largest strings as you go through. For example, if called with ./reverse one two three:
-It would display the output for part A:;
-	Three two one;
-And then it would display;
-	The smallest string was: one;
+It would display the output for part A:<br>
+	Three two one<br>
+And then it would display<br>
+	The smallest string was: one<br>
 	The largest string was: two;
