@@ -54,3 +54,18 @@ A HERE document is a way to add input to a script easily. It is described in sec
 2a) Using the above regular expression, use sed to replace that extension with the extension .jpeg
 3) Give a sed command that would output every line in a file that did not start with the letter ‘a’ and do not end with .html
 4) Write a line in sed to find all phone numbers that look like 1234567890 with (123)456-7890
+
+
+--------------------------------------------------------------------------------------------------- 
+                                              Project #3 [40 points]
+--------------------------------------------------------------------------------------------------- 
+### A.	[20 points] Write a program that takes its command-line arguments and starts by printing them in reverse order.  For example, if your executable is called reverse and you run it by:
+./reverse one two three
+The output should be:
+	three two one
+### B.	[20 points] Adding to your program in part A, go through the command line arguments and find the largest and smallest arguments (by lexographic order). Note that you should not need to sort your arguments, but instead compare them and save the smallest and largest strings as you go through. For example, if called with ./reverse one two three:
+It would display the output for part A:;
+	Three two one;
+And then it would display;
+	The smallest string was: one;
+	The largest string was: two;
