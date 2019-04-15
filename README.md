@@ -65,7 +65,7 @@ The output should be:
 	three two one
 ### B.	[20 points] Adding to your program in part A, go through the command line arguments and find the largest and smallest arguments (by lexographic order). Note that you should not need to sort your arguments, but instead compare them and save the smallest and largest strings as you go through. For example, if called with ./reverse one two three:
 It would display the output for part A:<br>
-	Three two one<br>
+	&nbspThree two one<br>
 And then it would display<br>
-	The smallest string was: one<br>
-	The largest string was: two;
+	&nbspThe smallest string was: one<br>
+	&nbspThe largest string was: two;
