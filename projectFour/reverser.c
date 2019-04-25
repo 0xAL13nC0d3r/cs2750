@@ -6,8 +6,8 @@
 
 int main(int argc, char *argv[]) {
 	int opt;
-    	char inputFile[100] = "apple.txt";
-    	char outputFile[100] = "banana.txt";
+    	char inputFile[100] = "input.txt";
+    	char outputFile[100] = "output.txt";
 
     	struct Stack *stack = createStack(100);
 
@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
     	while((opt = getopt(argc, argv, "hi:o:")) != -1) {
         	switch(opt) {
             	case 'h':
-                	printf("You need help!");
+                	printf("Usage -i <input file> -o <output file> -h <help>\n");
 			exit(0);
                 	break;
             	case 'i':
@@ -42,7 +42,6 @@ int main(int argc, char *argv[]) {
     	pch = strtok(buffer, " \n");
 	int count = 0;
 	while(pch != NULL) {
-        	printf("%s\n", pch);
         	//check stack for duplicates
         	int item = atoi(pch);
         	if(!duplicate(stack, item)) {

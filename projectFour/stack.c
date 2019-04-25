@@ -18,7 +18,6 @@ struct Stack *createStack(int max) {
 
 void push(struct Stack *s, int item) {
     	s->array[++s->top] = item;
-	//printf("%d pushed to stack!\n", item);
 }
 
 int pop(struct Stack *s) {
