@@ -1,6 +1,6 @@
 # System Programming and Tools
 ---------------------------------------------------------------------------------------------------  
-                                             Project #1 [65 points]
+Project #1 [65 points]
 ---------------------------------------------------------------------------------------------------   
 Attention! In the beginning of each program (Bash script file), after “shebang” line, there should be comments with the author’s name and the purpose of a script. Up to 3 points will be subtracted from your score for each part of the project if you don’t include this information.
 ### A.	[30 points] Write a Bash shell script named info.sh. The command for execution must include two command-line parameters: the name of the file that will be displayed and the name of the directory the listing of which you want to obtain. The output of this script must contain the following information:
@@ -41,7 +41,7 @@ Congratulations Mary Jones, you passed with an average of 82!
  
 
 ---------------------------------------------------------------------------------------------------  
-                                             Project #2 [65 points]
+Project #2 [65 points]
 ---------------------------------------------------------------------------------------------------  
 ### A. [20 points] Write a script named listEmptyDir.sh that will do the following: (a) take a name of a directory as a parameter; (b) loop through all files in this directory and display their names; (c) if a file is a directory and has no files in it (empty directory), add the name of this empty directory to the file EmptyDir.txt in your current directory. If the number of parameters is not 1 or a parameter is not a directory, display the “usage” message and exit with non-zero status. Your file for submission should demonstrate that you have investigated all possible situations.
 
@@ -57,7 +57,7 @@ A HERE document is a way to add input to a script easily. It is described in sec
 
 
 --------------------------------------------------------------------------------------------------- 
-                                              Project #3 [40 points]
+Project #3 [40 points]
 --------------------------------------------------------------------------------------------------- 
 ### A.	[20 points] Write a program that takes its command-line arguments and starts by printing them in reverse order.  For example, if your executable is called reverse and you run it by:
 ./reverse one two three
@@ -69,3 +69,38 @@ It would display the output for part A:<br>
 And then it would display<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The smallest string was: one<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The largest string was: two	
+
+--------------------------------------------------------------------------------------------------- 
+Project #4 [60 points]
+---------------------------------------------------------------------------------------------------   
+Due date is Tuesday, April 30th.
+###Task:
+In this project you are being asked to write a program that will read in a text file based on a command line argument and then work with that file, producing an output file.
+The command line arguments that your program should take are -h, -i and -o. -i lets the person running specify the input file (default should be input.txt). -o lets the user specify the output file (default should be output.txt). 
+
+An example of running this project would be, if your executable was called palin,
+./reverser -i data.in -o data.out
+	to read data from the file data.in and send data to data.out
+
+The input file will consist of many lines of numbers, separated by spaces, with no line longer than 80 characters. An example input file would be something like this:
+5 17 20 37 8
+57 17 17 5 3 9
+1 2 3 4 5 6
+7 8 1 837 43847
+
+I want you to go through this file, line by line. Starting with the first number, read it number by number into a stack data structure that you create. This stack should be implemented using a structure, with a fixed or dynamically allocated array and an integer storing the location of the topmost element and appropriate functions that work with that structure (push, pop). An example of this structure would be something similar to:
+struct Stack {
+    int top;
+    int stack[100];
+};
+
+Then, using that stack, output the numbers to your output file, again line by line. Treat each line separately. The result should be a file where each output line is the reverse of the input line, with one condition. I want your stack functions to ignore duplicates. So your stack should, before adding an element to the stack, ensure that the number is not already in the stack.
+
+
+Details:
+You must implement this project using at least 3 source files, reverser.c, stack.h, stack.c, You also must have a makefile that will compile the project for me. If you do not include a makefile your project will not be run.
+
+In addition, I want you to take a screenshot of you using the debugger to examine the elements of your stack array in the middle of running your code. That is because I want you to immediately start using the debugger and so this is part of your credit.
+
+Submission:
+Submit the 3 source files, your makefile, and the proof of debugging as separate files in canvas (not zipped up please). 
