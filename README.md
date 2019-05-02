@@ -73,8 +73,7 @@ And then it would display<br>
 --------------------------------------------------------------------------------------------------- 
 Project #4 [60 points]
 ---------------------------------------------------------------------------------------------------   
-Due date is Tuesday, April 30th.
-###Task:
+### Task:
 In this project you are being asked to write a program that will read in a text file based on a command line argument and then work with that file, producing an output file.
 The command line arguments that your program should take are -h, -i and -o. -i lets the person running specify the input file (default should be input.txt). -o lets the user specify the output file (default should be output.txt). 
 
@@ -96,11 +95,10 @@ struct Stack {
 
 Then, using that stack, output the numbers to your output file, again line by line. Treat each line separately. The result should be a file where each output line is the reverse of the input line, with one condition. I want your stack functions to ignore duplicates. So your stack should, before adding an element to the stack, ensure that the number is not already in the stack.
 
-
-Details:
+#### Details:
 You must implement this project using at least 3 source files, reverser.c, stack.h, stack.c, You also must have a makefile that will compile the project for me. If you do not include a makefile your project will not be run.
 
 In addition, I want you to take a screenshot of you using the debugger to examine the elements of your stack array in the middle of running your code. That is because I want you to immediately start using the debugger and so this is part of your credit.
 
-Submission:
+#### Submission:
 Submit the 3 source files, your makefile, and the proof of debugging as separate files in canvas (not zipped up please). 
