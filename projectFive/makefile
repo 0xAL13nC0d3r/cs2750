@@ -1,13 +1,13 @@
-all: A B
+all: A B 
 
 A: master.o
-	gcc master.o -o all
+	gcc -o master master.o 
 
 B: worker.o
-	gcc worker.o -o all
+	gcc -o worker worker.o
 
 master.o: master.c
-	gcc -c -o master.o master.c
+	gcc -c  master.c
 
 worker.o: worker.c
-	gcc -c -o worker.o worker.c
+	gcc -c worker.c

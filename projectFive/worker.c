@@ -1,43 +1,54 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 #include <sys/ipc.h>
 #include <sys/shm.h>
 
+#define SHM_KEY 0x35353535
+
 int isPrime(int n);
-void getPrime(int n);
+int getPrime(int n);
 
 int main(int argc, char *argv[]) {
+	int prime, value, shmid, reset;
+	char *s, *shm;
+	
 	if(argc < 2) { 
-		printf("Missing argument! Usage <./worker> <Integer>\n");
+		printf("Missing argument! Usage <./worker <Integer>\n");
 		exit(1);
  	}
-	int value = atoi(argv[1]);
 	
-	getPrime(value);	
+	//find largest prime smaller than input value
+	value = atoi(argv[1]);
+	printf("Worker: finding largest prime smaller than %d...\n", value);
+	prime = getPrime(value);	
 	
-	//check shared memory location
-	int shmid;
-	char *shm;
-	char *s;
-
-	shmid = shmget(9999, sizeof(value), 0644 | IPC_CREAT);	
-	if(shmid < 0) {
-		printf("Error getting memory!\n");
+	//get shared memory id
+	shmid = shmget(SHM_KEY, sizeof(value), 0);
+	if(shmid == -1) {
+		printf("Worker: unable to get memory ID.\n");
 		exit(1);
 	}
 	
+	//attach to shared memory
 	shm = shmat(shmid, NULL, 0);
 	if(shm == (char *) - 1) {
-		printf("Error attaching to memory!\n");
+		printf("Worker: error attaching to memory.\n");
 		exit(1);
 	}
-
+	
+	//insert value into shared memory
 	s = shm;
-	printf("Location is %d", *s);
-
-
-	
-	
+	if(*s != 0) {
+		printf("Worker: shared memory location is zero.\n");
+		exit(1);
+	} else {
+		printf("Worker: shared memory location is zero.\n");		
+		printf("Worker: putting %d into shared memory.\n", prime);
+		*s = prime;
+		printf("Worker: process terminating.\n");
+		exit(0);	
+	}	
 }
 
 int isPrime(int n) {
@@ -63,7 +74,7 @@ int isPrime(int n) {
 	
 }
 
-void getPrime(int n) {
+int getPrime(int n) {
 	int mainPrime = 2;
 	for(int i = 2; i <= n; i++) {
 		if(isPrime(i)) {
@@ -72,6 +83,5 @@ void getPrime(int n) {
 			}
 		}
 	}
-
-	printf("Main prime is %d\n", mainPrime);
+	return mainPrime;
 }
